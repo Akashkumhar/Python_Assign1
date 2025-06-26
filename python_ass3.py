@@ -19,6 +19,7 @@ def fetch_movie_data(movie_name):
     "apikey": "f8f01e5f"
     }
     response = requests.get(url=base_url, params=params)
+    print(response)
     data = response.text
     return data
 
