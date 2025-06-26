@@ -9,7 +9,7 @@ def get_movie_titles():
 
 def save_to_csv(data_list, filename):
     with open(filename, "a", newline='') as f:
-        f.write(f"{data_list}")
+        f.write(f"{data_list}\n")
 
 
 def fetch_movie_data(movie_name):
@@ -19,7 +19,6 @@ def fetch_movie_data(movie_name):
     "apikey": "f8f01e5f"
     }
     response = requests.get(url=base_url, params=params)
-    print(response)
     data = response.text
     return data
 
